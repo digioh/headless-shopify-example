@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -24,6 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* START Digioh Low Impact Javascript */}
+        <Script
+          src="https://www.lightboxcdn.com/vendor/0d45b422-42a7-423f-b151-d9efd96b63e6/lightbox_speed.js"
+          strategy="afterInteractive"
+        />
+        {/* END Digioh Low Impact Javascript */}
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
